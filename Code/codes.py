@@ -81,6 +81,8 @@ rd=""
 #디렉토리 수정
 path = pathlib.Path(__file__)
 fpath= path.parent.parent
+savefilepath=os.path.join(fpath,f"\\식당 이용자 명단\\{roottime.strftime('%Y년 %m월')}.csv")
+mainlist_backup=os.path.join(fpath,"\\카드정보 백업")
 os.chdir(fpath)
 
 
@@ -213,7 +215,7 @@ def get_data():
                             global visitorlog
                             globals()[name].RFID=coldpotato
                             x=readfile("user_list_RFID.csv")
-                            writefile(x,f"user_list_backup_{shortformattime2} {whattime()}.csv")
+                            writefile(x,os.path.join(mainlist_backup,f"\\{shortformattime2} {whattime()}.csv"))
                             for d in x:
                                 if d["Name"]==name:
                                     d["RFID"]=coldpotato
@@ -272,9 +274,9 @@ for x in user_list_raw:
 
 
 
-f="user_list.csv"
-if os.path.isfile(f):
-    x=readfile(f)
+
+if os.path.isfile(savefilepath):
+    x=readfile(savefilepath)
     keyz=x[0].keys()
     for k in keyz:
         if k==shortformattime:
@@ -298,9 +300,8 @@ def startgui():
     start.mainloop()
 
 def save():
-    f="user_list.csv"
-    if os.path.isfile(f):
-        x=readfile(f)
+    if os.path.isfile(savefilepath):
+        x=readfile(savefilepath)
     else:
         x=readfile("user_list_RFID.csv")
         for d in x:
@@ -316,11 +317,11 @@ def save():
         if raw.menu=="죽식":
             check=check+"(죽)"
         d[shortformattime]=check
-    writefile(x,f)
+    writefile(x,savefilepath)
         
 def autosave():
     global visitorlog
-    if cnt!=0 and cnt%10==0:
+    if currentwindow==cntframe:
         save()
         visitorlog=f"{whattime()}: 저장 완료 (자동저장)\n"
         add_text()
