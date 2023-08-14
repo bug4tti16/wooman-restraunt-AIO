@@ -81,8 +81,7 @@ rd=""
 #디렉토리 수정
 path = pathlib.Path(__file__)
 fpath= path.parent.parent
-savefilepath=os.path.join(fpath,f"\\식당 이용자 명단\\{roottime.strftime('%Y년 %m월')}.csv")
-mainlist_backup=os.path.join(fpath,"\\카드정보 백업")
+savefilepath=f"{roottime.strftime('%Y년 %m월')}.csv"
 os.chdir(fpath)
 
 
@@ -215,7 +214,6 @@ def get_data():
                             global visitorlog
                             globals()[name].RFID=coldpotato
                             x=readfile("user_list_RFID.csv")
-                            writefile(x,os.path.join(mainlist_backup,f"\\{shortformattime2} {whattime()}.csv"))
                             for d in x:
                                 if d["Name"]==name:
                                     d["RFID"]=coldpotato
@@ -292,6 +290,7 @@ if os.path.isfile(savefilepath):
                     if char=="죽":
                         raw.menu="죽식"
     visitorlog=f"정보 불러오기 끝 {str(cnt)}명\n{visitorlog}"
+print (savefilepath)
 print(f"visitorlog:\n{visitorlog}")
 
 
