@@ -324,7 +324,7 @@ def autosave():
         save()
         visitorlog=f"{whattime()}: 저장 완료 (자동저장)\n"
         add_text()
-    start.after(60000,autosave)
+    start.after(300000,autosave)
 
 def updateinfobox():
     global name_label,num_label,rfid_label
