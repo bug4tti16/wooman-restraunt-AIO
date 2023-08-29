@@ -1,11 +1,11 @@
-from multiprocessing import Process, Manager, Queue
+from multiprocessing import Process, Queue
 from threading import Thread
 from datetime import datetime
 import tkinter as tk
 from tkinter.scrolledtext import ScrolledText
 from tkinter import messagebox
 import serial,csv,time,locale,os,pathlib,winsound,re
-from functools import partial
+
 
 INFOTEXT="""경로식당 프로그램을 시작합니다.
 인원관리 프로그램 코딩 완료하였습니다!!
