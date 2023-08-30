@@ -44,13 +44,13 @@ def INIT_DATA():
     name=datetime.now().strftime('%Y년 %m월.csv'.encode('unicode-escape').decode()).encode().decode('unicode-escape')
     today=datetime.now().strftime('%m/%d')
     ULIST=[]
-    file=open("user_list_RFID.csv",'rt',encoding=("utf-8"))
+    file=open("user_list_RFID.csv",'rt',encoding=("ansi"))
     RAWLIST=list(csv.DictReader(file))
     file.close()
     for x in RAWLIST:
         ULIST.append(USER_DATA(x))
     try:
-        save=open(name,'r',encoding=("cp949"))
+        save=open(name,'r',encoding=("ansi"))
     except:
         pass
     else:
@@ -63,7 +63,7 @@ def INIT_DATA():
                         if d.num==dic["Num"] and d.name==dic["Name"]:
                             for chr in dic[today]:
                                 if chr=="O":
-                                    i=d.rfid
+                                    i=d.RFID
                                     print(i)
                                     DATAIN.put(i,block=False)
                                 if chr=="N":
@@ -95,6 +95,7 @@ class USER_DATA:
                 out="NC"
             if self.menu=="죽식":
                 out=out+ " (죽식)"
+        
         return out
 
 class CARD_READER:
@@ -221,7 +222,7 @@ class COUNT_FRAME(tk.Frame):
 
     def Write_File(cntframe,list,filename):
         keys=list[0].keys()
-        with open(filename,'w',newline='',encoding="utf-8") as output:
+        with open(filename,'w',newline='',encoding="ansi") as output:
             dict_writer = csv.DictWriter(output,keys)
             dict_writer.writeheader()
             dict_writer.writerows(list)
@@ -255,7 +256,7 @@ class COUNT_FRAME(tk.Frame):
         fn=dt.strftime("%Y년 %m월.csv".encode('unicode-escape').decode()).encode().decode('unicode-escape')
         today=dt.strftime("%m/%d")
         try:
-            s=open(fn,'r',encoding=("utf-8"))
+            s=open(fn,'r',encoding=("ansi"))
         except:
             badlist=True
         else:
