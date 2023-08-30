@@ -518,11 +518,11 @@ class COUNT_FRAME(tk.Frame):
                 cntframe.CURRENT=uid
                 cntframe.Update_DATA([st,cntframe.CURRENT.name,cntframe.CURRENT.num,cntframe.CURRENT.menu,cntframe.CURRENT.time])
                 if uid.flag==True:
-                    SOUND()
                     msg=F'{uid.name}님 {FLAGMSG}'
                     cntframe.bodytext.config(state="normal")
                     cntframe.bodytext.insert("1.0",f"{msg}\n")
                     cntframe.bodytext.config(state="disabled")
+                    SOUND()
 
             if uid.att==False:
                 st=f"{uid.num}번 {uid.name}님 확인되었습니다."
@@ -533,11 +533,11 @@ class COUNT_FRAME(tk.Frame):
                 cntframe.Update_DATA([st,uid.name,uid.num,uid.menu,uid.time])
                 cntframe.CURRENT=uid
                 if uid.flag==True:
-                    SOUND()
                     msg=F'{uid.name}님 {FLAGMSG}'
                     cntframe.bodytext.config(state="normal")
                     cntframe.bodytext.insert("1.0",f"{msg}\n")
                     cntframe.bodytext.config(state="disabled")
+                    SOUND()
 
             
         
