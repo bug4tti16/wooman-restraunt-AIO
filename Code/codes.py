@@ -50,7 +50,7 @@ def INIT_DATA():
     for x in RAWLIST:
         ULIST.append(USER_DATA(x))
     try:
-        save=open(name,'r',encoding=("utf-8"))
+        save=open(name,'r',encoding=("cp949"))
     except:
         pass
     else:
