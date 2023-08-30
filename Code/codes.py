@@ -1,5 +1,4 @@
 from multiprocessing import Process, Queue
-from threading import Thread
 from datetime import datetime
 import tkinter as tk
 from tkinter.scrolledtext import ScrolledText
@@ -635,7 +634,7 @@ class EDIT_FRAME(tk.Frame):
             except:
                 p.after(100,reader)
             else:
-                self.SELECTED.RFID=p
+                self.SELECTED.RFID=k
                 ld=[]
                 for x in USER_DIR:
                     dd={"Num":x.num,"Name":x.name,"RFID":x.RFID}
@@ -647,10 +646,10 @@ class EDIT_FRAME(tk.Frame):
 
         if self.SELECTED!=None:
             while True:
-                if DATAIN.empty():
-                    break
+                try:
+                    TRASH=DATAIN.get_nowait()
                 else:
-                    x=DATAIN.get(block=False)
+                    break
 
             p=tk.Toplevel(BASE_WINDOW)
             p.title="카드 등록"
