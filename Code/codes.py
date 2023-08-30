@@ -23,6 +23,7 @@ sl4720@gmail.com"""
 port = 'COM3'
 baud_rate = 9600
 SAMENAME=None
+FLAGMSG="사무실로 와주시길 바랍니다"
 locale.setlocale(locale.LC_CTYPE, 'korean')
 
 def Abort_master():
@@ -74,6 +75,21 @@ def INIT_DATA():
                                     d.menu='죽식'
                 
         save.close()
+    try:
+        flag=open("FLAG.txt",'r',encoding=("ansi"))
+    except:
+        pass
+    else:
+        readline1=flag.readline()
+        readline2=flag.readline()
+        if readline1!="":
+            if readline2!="":
+                globals()[FLAGMSG]=readline2
+            l=list(readline1.split(","))
+            for n in l:
+                for us in ULIST:
+                    if us.name==n:
+                        us.flag=True
     finally:
         return ULIST
 
@@ -86,6 +102,7 @@ class USER_DATA:
         self.time=""
         self.menu="일반식"
         self.card=True
+        self.flag=False
     def Prepare_save(self):
         out=""
         if self.att==True:
@@ -160,10 +177,14 @@ class START_FRAME(tk.Frame):
 
     def GOTO_Count(baseframe):
         baseframe.pack_forget()
+        BASE_WINDOW.bind("<Return>",lambda event:COUNT_WINDOW.Enterbox())
+        BASE_WINDOW.bind("m",lambda event:COUNT_WINDOW.Menu_button())
+        BASE_WINDOW.bind("ww",lambda event:COUNT_WINDOW.Manualsave())
         COUNT_WINDOW.pack(fill=tk.BOTH,expand=tk.TRUE)
     
     def GOTO_EDIT(baseframe):
         baseframe.pack_forget()
+        BASE_WINDOW.bind("<Return>",lambda event:EDIT_WINDOW.Search())
         EDIT_WINDOW.pack(fill=tk.BOTH,expand=tk.TRUE)
 
 class COUNT_FRAME(tk.Frame):
@@ -213,9 +234,7 @@ class COUNT_FRAME(tk.Frame):
         cntframe.CURRENT=None
         cntframe.Look_for_Data()
         cntframe.Autosave()
-        BASE_WINDOW.bind("<Return>",lambda event:cntframe.Enterbox())
-        BASE_WINDOW.bind("m",lambda event:cntframe.Menu_button())
-        BASE_WINDOW.bind("ww",lambda event:cntframe.Manualsave())
+
         for x in USER_DIR:
             if x.menu=="죽식":
                 cntframe.MENU_CNT+=1
@@ -426,6 +445,7 @@ class COUNT_FRAME(tk.Frame):
             okbt.pack(padx=5,pady=5)
             warning.bind("<Return>",lambda event:okbtf())
             BASE_WINDOW.wait_window(warning)
+            
 
         name=[]
         namecnt=0
@@ -488,12 +508,6 @@ class COUNT_FRAME(tk.Frame):
                         cntframe.bodytext.config(state="disabled")
                         SOUND()
 
-
-
-
-
-        
-
         else:
             print(f"{uid.RFID} {uid.name}: data passed")
             if namecnt==1:
@@ -503,6 +517,12 @@ class COUNT_FRAME(tk.Frame):
                 st=f"이미 이용하신 이용자 입니다. {uid.name}님 {uid.time}에 이용."
                 cntframe.CURRENT=uid
                 cntframe.Update_DATA([st,cntframe.CURRENT.name,cntframe.CURRENT.num,cntframe.CURRENT.menu,cntframe.CURRENT.time])
+                if uid.flag==True:
+                    SOUND()
+                    msg=F'{uid.name}님 {FLAGMSG}'
+                    cntframe.bodytext.config(state="normal")
+                    cntframe.bodytext.insert("1.0",f"{msg}\n")
+                    cntframe.bodytext.config(state="disabled")
 
             if uid.att==False:
                 st=f"{uid.num}번 {uid.name}님 확인되었습니다."
@@ -512,6 +532,13 @@ class COUNT_FRAME(tk.Frame):
                 cntframe.TOT_CNT+=1
                 cntframe.Update_DATA([st,uid.name,uid.num,uid.menu,uid.time])
                 cntframe.CURRENT=uid
+                if uid.flag==True:
+                    SOUND()
+                    msg=F'{uid.name}님 {FLAGMSG}'
+                    cntframe.bodytext.config(state="normal")
+                    cntframe.bodytext.insert("1.0",f"{msg}\n")
+                    cntframe.bodytext.config(state="disabled")
+
             
         
         cntframe.after(100,cntframe.Look_for_Data)
@@ -548,7 +575,7 @@ class EDIT_FRAME(tk.Frame):
         self.NAME.pack(fill=tk.X)
         self.RFIDBOOL.pack(fill=tk.X)
         self.INFO_LISTBOX.bind('<<ListboxSelect>>', lambda event:self.Selected())
-        BASE_WINDOW.bind("<Return>",lambda event:self.Search())
+
         
 
     def Load_info(self):
@@ -601,6 +628,7 @@ class EDIT_FRAME(tk.Frame):
                 inpname.pack(side=tk.LEFT,fill=tk.X,expand=tk.TRUE)
                 p.bind("<Return>",lambda event:Enter())
                 BASE_WINDOW.wait_window(p)
+                p.bind("<Return>",lambda event:COUNT_WINDOW.Enterbox())
             
     def Selected(self):
         x=self.INFO_LISTBOX.curselection()
@@ -668,13 +696,72 @@ class GUI(tk.Tk):
         self.state("zoomed")
         menubar=tk.Menu(self)
         tool_menu=tk.Menu(menubar,tearoff=False)
-        tool_menu.add_command(label="금일 이용자 검색")
-        tool_menu.add_command(label="저장")
-        tool_menu.add_command(label='종료')
+        tool_menu.add_command(label="금일 이용자 검색",command=self.Finder)
+        tool_menu.add_command(label='종료',)
         menubar.add_cascade(label="도구",menu=tool_menu,underline=0)
         self.config(menu=menubar)
         self.protocol("WM_DELETE_WINDOW", Abort_master)
         self.bind("R<Return>",lambda event:Abort_master())
+
+        
+    def Finder(self):
+
+        def Enter():
+            enter=e.get()
+            if enter!="":
+                e.delete(0,tk.END)
+                uid=None
+                namecnt=0
+                name=[]
+                for u in USER_DIR:
+                    if enter==u.num:
+                        uid=u
+                        break
+                    if enter==u.name:
+                        uid=u
+                        namecnt+=1
+                        name.append(u)
+                if namecnt>1:
+                    uid=None
+                    COUNT_FRAME.Same_name(name)
+                    if SAMENAME!=None:
+                        uid=SAMENAME
+                if uid==None:
+                    name=enter
+                    msg="이용자 정보 없음"
+                    
+                if uid!=None:
+                    name=uid.name
+                    if uid.att:
+                        
+                        msg=f"{uid.time}에 이용"
+                    else:
+                        msg=f"식당 미이용"
+                b=messagebox.askokcancel(name,msg)
+                if b==True or b==False:
+                    pop.wm_transient(BASE_WINDOW)
+                    e.focus()
+
+    
+        pop=tk.Toplevel(self)
+        pop.title("금일 이용자 검색")
+        l=tk.Label(pop,text="금일 이용자 검색")
+        e=tk.Entry(pop)
+        l.pack()
+        e.pack()
+        e.focus()
+        pop.bind("<Return>",lambda event:Enter())
+        self.wait_window(pop)
+
+
+
+
+        
+
+                    
+                
+                        
+
 
 
 
