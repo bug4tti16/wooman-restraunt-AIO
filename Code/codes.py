@@ -44,13 +44,13 @@ def INIT_DATA():
     name=datetime.now().strftime('%Y년 %m월.csv'.encode('unicode-escape').decode()).encode().decode('unicode-escape')
     today=datetime.now().strftime('%m/%d')
     ULIST=[]
-    file=open("user_list_RFID.csv",'r',encoding=("cp949"))
+    file=open("user_list_RFID.csv",'rt',encoding=("utf-8"))
     RAWLIST=list(csv.DictReader(file))
     file.close()
     for x in RAWLIST:
         ULIST.append(USER_DATA(x))
     try:
-        save=open(name,'r',encoding=("cp949"))
+        save=open(name,'r',encoding=("utf-8"))
     except:
         pass
     else:
@@ -221,7 +221,7 @@ class COUNT_FRAME(tk.Frame):
 
     def Write_File(cntframe,list,filename):
         keys=list[0].keys()
-        with open(filename,'w',newline='',encoding="cp949") as output:
+        with open(filename,'w',newline='',encoding="utf-8") as output:
             dict_writer = csv.DictWriter(output,keys)
             dict_writer.writeheader()
             dict_writer.writerows(list)
@@ -255,7 +255,7 @@ class COUNT_FRAME(tk.Frame):
         fn=dt.strftime("%Y년 %m월.csv".encode('unicode-escape').decode()).encode().decode('unicode-escape')
         today=dt.strftime("%m/%d")
         try:
-            s=open(fn,'r',encoding=("cp949"))
+            s=open(fn,'r',encoding=("utf-8"))
         except:
             badlist=True
         else:
