@@ -648,7 +648,7 @@ class EDIT_FRAME(tk.Frame):
             while True:
                 try:
                     TRASH=DATAIN.get_nowait()
-                else:
+                except:
                     break
 
             p=tk.Toplevel(BASE_WINDOW)
