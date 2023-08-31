@@ -67,7 +67,7 @@ def INIT_DATA():
                                 if d.RFID!="":
                                     i=d.RFID
                                 else:
-                                    i=d.Num
+                                    i=d.num
                                 print(i)
                                 DATAIN.put(i,block=False)
                             if dic[today]=="NC":
@@ -78,7 +78,7 @@ def INIT_DATA():
                                 if d.RFID!="":
                                     i=d.RFID
                                 else:
-                                    i=d.Num
+                                    i=d.num
                                 DATAIN.put(i,block=False)
                                 d.menu='죽식'
                             if dic[today]=="NC (죽식)":
