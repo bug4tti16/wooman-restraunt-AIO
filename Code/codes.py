@@ -67,7 +67,7 @@ def INIT_DATA():
                                 print(i)
                                 DATAIN.put(i,block=False)
                             if dic[today]=="NC":
-                                nn=d.num
+                                nn=dic["Num"]
                                 print(nn)
                                 DATAIN.put(nn,block=False)
                             if dic[today]=="O (죽식)":
@@ -76,7 +76,7 @@ def INIT_DATA():
                                 DATAIN.put(i,block=False)
                                 d.menu='죽식'
                             if dic[today]=="NC (죽식)":
-                                nn=d.num
+                                nn=dic["Num"]
                                 print(nn)
                                 DATAIN.put(nn,block=False)
                                 d.menu='죽식'
