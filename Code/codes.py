@@ -554,7 +554,7 @@ class COUNT_FRAME(tk.Frame):
 
             
 
-        cntframe.after(50,cntframe.Look_for_Data)
+        cntframe.after(10,cntframe.Look_for_Data)
                     
 class EDIT_FRAME(tk.Frame):
     def __init__(self,container):
