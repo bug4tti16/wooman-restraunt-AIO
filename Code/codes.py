@@ -99,6 +99,7 @@ def INIT_DATA():
                     if us.name==n:
                         us.flag=True
     finally:
+        print(DATAIN.qsize())
         return ULIST
 
 class USER_DATA:
