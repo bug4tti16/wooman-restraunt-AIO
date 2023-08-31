@@ -550,10 +550,8 @@ class COUNT_FRAME(tk.Frame):
                     SOUND()
 
             
-        if DATAIN.qsize()>1:
-            cntframe.after(500,cntframe.Look_for_Data)
-        else:
-            cntframe.after(100,cntframe.Look_for_Data)
+
+        cntframe.after(100,cntframe.Look_for_Data)
                     
 class EDIT_FRAME(tk.Frame):
     def __init__(self,container):
