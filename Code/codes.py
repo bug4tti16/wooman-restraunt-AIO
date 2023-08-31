@@ -62,17 +62,24 @@ def INIT_DATA():
                 for dic in SAVE:
                     for d in ULIST:
                         if d.num==dic["Num"] and d.name==dic["Name"]:
-                            for chr in dic[today]:
-                                if chr=="O":
-                                    i=d.RFID
-                                    print(i)
-                                    DATAIN.put(i,block=False)
-                                if chr=="N":
-                                    nn=d.num
-                                    print(nn)
-                                    DATAIN.put(nn,block=False)
-                                if chr=="죽":
-                                    d.menu='죽식'
+                            if dic[today]=="O":
+                                i=d.RFID
+                                print(i)
+                                DATAIN.put(i,block=False)
+                            if dic[today]=="NC":
+                                nn=d.num
+                                print(nn)
+                                DATAIN.put(nn,block=False)
+                            if dic[today]=="O (죽식)":
+                                i=d.RIFD
+                                print(i)
+                                DATAIN.put(i,block=False)
+                                d.menu='죽식'
+                            if dic[today]=="NC (죽식)":
+                                nn=d.num
+                                print(nn)
+                                DATAIN.put(nn,block=False)
+                                d.menu='죽식'
                 
         save.close()
     try:
