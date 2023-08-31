@@ -62,6 +62,7 @@ def INIT_DATA():
                 for dic in SAVE:
                     for d in ULIST:
                         if d.num==dic["Num"] and d.name==dic["Name"]:
+                            print (f"{dic["name"]}: {dic[today]}")
                             if dic[today]=="O":
                                 i=d.RFID
                                 print(i)
