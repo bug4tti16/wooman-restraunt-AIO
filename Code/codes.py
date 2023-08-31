@@ -64,7 +64,7 @@ def INIT_DATA():
                         if d.num==dic["Num"] and d.name==dic["Name"]:
                             print (f"{dic['Name']}: {dic[today]}")
                             if dic[today]=="O":
-                                if d.RIFD!="":
+                                if d.RFID!="":
                                     i=d.RFID
                                 else:
                                     i=d.Num
@@ -75,7 +75,7 @@ def INIT_DATA():
                                 print(nn)
                                 DATAIN.put(nn,block=False)
                             if dic[today]=="O (죽식)":
-                                if d.RIFD!="":
+                                if d.RFID!="":
                                     i=d.RFID
                                 else:
                                     i=d.Num
