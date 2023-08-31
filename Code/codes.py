@@ -464,6 +464,7 @@ class COUNT_FRAME(tk.Frame):
                 uid=x
                 break
             if x.num==data:
+                print (f"Number {data} attained")
                 uid=x
                 uid.card=False
                 break
