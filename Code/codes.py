@@ -350,11 +350,9 @@ class COUNT_FRAME(tk.Frame):
     def Cancelbutton(cntframe):
         if cntframe.CURRENT!=None:
             cntframe.CURRENT.att=False
-            if cntframe.CURRENT.menu=="죽식":
-                cntframe.MENU_CNT-=1
-                cntframe.CURRENT.menu='일반식'
+            cntframe.CURRENT.menu='일반식'
             cntframe.CURRENT.time=''
-            cntframe.CURRENT.card=False
+            cntframe.CURRENT.card=True
             st=f"{cntframe.CURRENT.name}: 취소되었습니다."
             cntframe.CURRENT=None
             cntframe.TOT_CNT-=1
