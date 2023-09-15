@@ -13,4 +13,5 @@ __모듈 없데이트__ 실행
 
 ![first run](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/scripts%20folder.png)
 ## 프로그램 실행 후
-### 
+이용자 편집,
+이용자 관리 창에서 가능
