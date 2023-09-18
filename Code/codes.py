@@ -723,7 +723,7 @@ class GUI(tk.Tk):
         self.bind("R<Return>",lambda event:Abort_master())
         
     def Help(self):
-        webbrowser.open('https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/README.md')
+        webbrowser.open('https://github.com/bug4tti16/wooman-restraunt-AIO.git')
     
     def Finder(self):
 
