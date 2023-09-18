@@ -40,7 +40,7 @@ __모듈 업데이트__ 실행
 _정보 변경 시 날자별 백업파일 생산_
 ![data edit](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/change%20name.png)
 #### 저장 파일 형식
-파일명 : __####년 #일.csv__
+파일명 : __0000년 0월.csv__
 ![save file](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/save%20format.png)
 ##### 키워드 부연
 O : 카드 지참
