@@ -10,7 +10,6 @@ import serial,csv,time,locale,os,pathlib,winsound,re,webbrowser
 INFOTEXT="""경로식당 프로그램을 시작합니다.
 인원관리 프로그램 코딩 완료하였습니다!!
 사용 설명서: 도구 -> 도움말
-새로운 카드등록 방법은 임성호 사회복무요원에게 문의해주시길 바랍니다~~
 
 1분마다 자동저장 됩니다
 수동저장: ㅈㅈ
