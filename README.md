@@ -22,9 +22,9 @@ __모듈 업데이트__ 실행
 
 ![first run](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/scripts%20folder.png)
 ## 프로그램 실행 후
-### __시작 창__
+### __기본 창__
 ![welcome page](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/start%20page%20(2).png)
-### __이용자 관리 창__
+### __시작 창__
 ![welcome page](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/start%20page.png)
 ![attendance](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/start3.png)
 #### __동명이인, 이름 일부 입력 시 처리 방식__
@@ -33,7 +33,7 @@ __모듈 업데이트__ 실행
 금일 이용자 방문 여부 방문 시간 표출
 ![Loobar](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/toolbar.png)
 
-### __이용자 정보 관리 창__
+### __이용자 관리 창__
 #### 기본 창
 ![info page](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/edit%20page.png)
 #### 이용자 정보 변경
