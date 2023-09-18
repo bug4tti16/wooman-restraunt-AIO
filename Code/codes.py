@@ -44,7 +44,7 @@ def INIT_PROGRAM():
 
 def INIT_DATA():
     name=datetime.now().strftime('%Y년 %m월.csv'.encode('unicode-escape').decode()).encode().decode('unicode-escape')
-    today=datetime.now().strftime('%m/%d')
+    today=datetime.now().strftime(' %m/%d')
     ULIST=[]
     file=open("user_list_RFID.csv",'rt',encoding=("ansi"))
     RAWLIST=list(csv.DictReader(file))
@@ -284,7 +284,7 @@ class COUNT_FRAME(tk.Frame):
         dt=datetime.now()
         bun=dt.strftime("%Y년 %m월 %d일 backup.csv".encode('unicode-escape').decode()).encode().decode('unicode-escape')
         fn=dt.strftime("%Y년 %m월.csv".encode('unicode-escape').decode()).encode().decode('unicode-escape')
-        today=dt.strftime("%m/%d")
+        today=dt.strftime(" %m/%d")
         try:
             s=open(fn,'r',encoding=("ansi"))
         except:
