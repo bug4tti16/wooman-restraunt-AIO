@@ -100,6 +100,8 @@ def INIT_DATA():
                 for us in ULIST:
                     if us.name==n:
                         us.flag=True
+                    if us.num==n:
+                        us.flag=True
     finally:
         print(f"{DATAIN.qsize()}명 불러오기 완료.")
         return ULIST
