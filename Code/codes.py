@@ -4,7 +4,7 @@ import tkinter as tk
 from tkinter.scrolledtext import ScrolledText
 from tkinter import messagebox
 from jamo import h2j, j2hcj
-import serial,csv,time,locale,os,pathlib,winsound,re
+import serial,csv,time,locale,os,pathlib,winsound,re,webbrowser
 
 
 INFOTEXT="""경로식당 프로그램을 시작합니다.
@@ -714,7 +714,7 @@ class GUI(tk.Tk):
         menubar=tk.Menu(self)
         tool_menu=tk.Menu(menubar,tearoff=False)
         tool_menu.add_command(label="금일 이용자 검색",command=self.Finder)
-        tool_menu.add_command(label='종료',)
+        tool_menu.add_command(label='도움말',command=webbrowser.open('https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/README.md')
         menubar.add_cascade(label="도구",menu=tool_menu,underline=0)
         self.config(menu=menubar)
         self.protocol("WM_DELETE_WINDOW", Abort_master)
