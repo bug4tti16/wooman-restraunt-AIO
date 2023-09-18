@@ -5,4 +5,5 @@ pip install pyserial
 pip install datetime
 pip install multiprocessing
 pip install jamo
+pip install webbrowser
 pause
