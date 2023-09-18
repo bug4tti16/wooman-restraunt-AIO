@@ -3,6 +3,7 @@ from datetime import datetime
 import tkinter as tk
 from tkinter.scrolledtext import ScrolledText
 from tkinter import messagebox
+from jamo import h2j, j2hcj
 import serial,csv,time,locale,os,pathlib,winsound,re
 
 
@@ -62,17 +63,14 @@ def INIT_DATA():
                 for dic in SAVE:
                     for d in ULIST:
                         if d.num==dic["Num"] and d.name==dic["Name"]:
-                            print (f"{dic['Name']}: {dic[today]}")
                             if dic[today]=="O":
                                 if d.RFID!="":
                                     i=d.RFID
                                 else:
                                     i=d.num
-                                print(i)
                                 DATAIN.put(i,block=False)
                             if dic[today]=="NC":
                                 nn=dic["Num"]
-                                print(nn)
                                 DATAIN.put(nn,block=False)
                             if dic[today]=="O (죽식)":
                                 if d.RFID!="":
@@ -83,7 +81,6 @@ def INIT_DATA():
                                 d.menu='죽식'
                             if dic[today]=="NC (죽식)":
                                 nn=dic["Num"]
-                                print(nn)
                                 DATAIN.put(nn,block=False)
                                 d.menu='죽식'
                 
@@ -104,7 +101,7 @@ def INIT_DATA():
                     if us.name==n:
                         us.flag=True
     finally:
-        print(DATAIN.qsize())
+        print(f"{DATAIN.qsize()}명 불러오기 완료.")
         return ULIST
 
 class USER_DATA:
@@ -312,8 +309,6 @@ class COUNT_FRAME(tk.Frame):
                             d.update({today:u.Prepare_save()})
                 cntframe.Write_File(sd,fn)
         finally:
-            print (badlist)
-            print (fn)
             if badlist:
                 l=[]
                 for u in USER_DIR:
@@ -378,7 +373,6 @@ class COUNT_FRAME(tk.Frame):
             cntframe.Update_DATA([st,cntframe.CURRENT.name,cntframe.CURRENT.num,cntframe.CURRENT.menu,cntframe.CURRENT.time])
 
     def Same_name(cntframe,d):
-        print(d)
         def selection():
             globals()[SAMENAME]=None
             sel=lb.curselection()
@@ -386,6 +380,7 @@ class COUNT_FRAME(tk.Frame):
                 n=sel[0]
                 globals()[SAMENAME]=d[n]
                 p.destroy()
+        globals()[SAMENAME]=None
         p=tk.Toplevel(BASE_WINDOW)
         p.title("동명이인 존재")
         l=tk.Label(p,text="동명이인이 존재합니다.")
@@ -416,18 +411,17 @@ class COUNT_FRAME(tk.Frame):
                         cnt+=1
                 if cnt>1:
                     cntframe.Same_name(mname)
-                    rep=globals()[SAMENAME]
+                    if globals()[SAMENAME]!=None:
+                        rep=globals()[SAMENAME]
                 if rep==None:
                     warning.destroy()
                     cntframe.bodytext.config(state="normal")
                     cntframe.bodytext.insert("1.0",f"{newinfo}: 등록 실패\n")
                     cntframe.bodytext.config(state="disabled")
                 if rep!=None:
-                    print (rep.name)
                     msgbx=messagebox.askyesno(title='경고',message=f"{rep.name}님의 정보가 등록/교체됩니다.")
                     if msgbx:
                         rep.RFID=d
-                        print (rep.RFID)
                         cntframe.bodytext.config(state="normal")
                         cntframe.bodytext.insert("1.0",f"{rep.name}: 등록되었습니다\n")
                         cntframe.bodytext.config(state="disabled")
@@ -479,7 +473,8 @@ class COUNT_FRAME(tk.Frame):
                 namecnt+=1
             if namecnt>1:
                 cntframe.Same_name(name)
-                uid=globals()[SAMENAME]
+                if globals()[SAMENAME]!=None:
+                    uid=globals()[SAMENAME]
         if uid==None:
             if len(data)==10:
                 SOUND()
@@ -495,27 +490,34 @@ class COUNT_FRAME(tk.Frame):
                     l=[]
                     for x in USER_DIR:
                         cnt=0
-                        
-                        for c in x.name:
-                            if re.search(c,data):
-                                cnt+=1
+                        judata=list(j2hcj(h2j(x.name)))
+                        jdata=list(j2hcj(h2j(data)))
+                        for char in judata:
+                            for c in jdata:
+                                if c==char:
+                                    cnt+=1
+                                    judata.remove(char)
+                                    jdata.remove(c)
+                                    break
                         if cnt>1:
                             l.append(x)
+
+
+
                     if l!=[]:
                         cntframe.Same_name(l)
-                        if globals()[SAMENAME]!=None:
-                            g=globals()[SAMENAME]
-                            print(g)
-                            dat=g.num
-                            print (dat)
-                            DATAIN.put(dat,block=False)
-                            print (f"loaded queue({dat})")
-                        else:
+                        if globals()[SAMENAME]==None:
                             st=f"{data}: 등록되지 않은 이용자 입니다"
                             cntframe.bodytext.config(state="normal")
                             cntframe.bodytext.insert("1.0",f"{st}\n")
                             cntframe.bodytext.config(state="disabled")
                             SOUND()
+                        else:
+                            g=globals()[SAMENAME]
+                            dat=g.num
+                            DATAIN.put(dat,block=False)
+                            print (f"loaded queue({dat})")
+
                     else:
                         st=f"{data}: 등록되지 않은 이용자 입니다"
                         cntframe.bodytext.config(state="normal")
