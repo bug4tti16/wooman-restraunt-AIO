@@ -10,22 +10,22 @@ _*날자 오류 수정_
 
 ## __문제 해결__
 ### __프로그램 실행이 안되요!!! OTL__
-#### 해결 1
+### 해결 1
 __user_list_RFID.csv__ 파일 존재 확인
-#### 해결 2
+### 해결 2
 __user_list_RFID.csv__ 파일 실행 및 형식 확인
 ![user data](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/user%20data%20file.png)
-##### __중요__
+#### __중요__
 저장 시 CSV 파일로 저장!! -> 다른 이름으로 저장
 ![user data save](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/saving.png)
-####  해결 3
+###  해결 3
 메모장으로 열기 -> 다른 이름으로 열기 -> __인코딩 : ANSI__
 ![user data encoding](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/no%20open1.png)
 ![user data encoding](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/no%20open2.png)
-#### 해결 4
+### 해결 4
 __update code__ 실행
 ![first run](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/scripts%20folder.png)
-#### 해결 5
+### 해결 5
 __모듈 업데이트__ 실행
 ![first run](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/scripts%20folder.png)
 
