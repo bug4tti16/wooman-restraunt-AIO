@@ -1,4 +1,11 @@
 # 경로식당 프로그램 이용 가이드
+## 최근 업데이트 9/18/2023
+초성 검색 기능 추가
+_*동명이인 처리 참고_
+
+저장 파일 MSO 엑셀 친화적으로 변경
+_*날자 오류 수정_
+
 ## 프로그램 실행 전
 ### 올바른 파일 형태
 user_list_RFID.csv 파일 있음
@@ -28,7 +35,15 @@ __모듈 업데이트__ 실행
 #### 기본 창
 ![info page](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/edit%20page.png)
 #### 이용자 정보 변경
+_정보 변경 시 날자별 백업파일 생산_
 ![data edit](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/change%20name.png)
+#### 저장 파일 형식
+파일명 : __####년 #일.csv
+![save file](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/save%20format.png)
+##### 키워드 부연
+O : 카드 지참
+NC : 카드 미지참
+* (죽식) : 죽식 선택
 
 ### __플래그 소개__
 
