@@ -6,6 +6,8 @@ _*동명이인 처리 참고_
 저장 파일 MSO 엑셀 친화적으로 변경
 _*날자 오류 수정_
 
+플래그 메세지 업데이트 오류 수정
+
 ## 프로그램 실행 전
 ### 올바른 파일 형태
 user_list_RFID.csv 파일 있음
@@ -46,5 +48,14 @@ NC : 카드 미지참
 * (죽식) : 죽식 선택
 
 ### __플래그 소개__
+_기능 설명: 메세지와 알림음 발생_
+![flag running](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/flag%20in%20action.png)
+#### 플래그 파일 형태
+파일명 : __FLAG.txt__
+__*중요*__ 
+인코딩 : __ansi__ 
+![flag format](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/flag%20format.png)
+저장 방법 : __인코딩__ -> __ansi__ | __파일명__ : __FLAG.txt__
+![flag save](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/flag%20save.png)
 
 
