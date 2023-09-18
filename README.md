@@ -54,8 +54,11 @@ _기능 설명: 메세지와 알림음 발생_
 ![flag running](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/flag%20in%20action.png)
 #### 플래그 파일 형태
 파일명 : __FLAG.txt__
+
 __*중요*__ 
+
 인코딩 : __ansi__ 
+
 ![flag format](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/flag%20format.png)
 저장 방법 : __인코딩__ -> __ansi__ | __파일명__ : __FLAG.txt__
 ![flag save](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/flag%20save.png)
