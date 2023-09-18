@@ -15,7 +15,7 @@ __모듈 없데이트__ 실행
 ## 프로그램 실행 후
 ### __시작 창__
 ![welcome page](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/start%20page%20(2).png)
-###__이용자 관리 창__
+### __이용자 관리 창__
 ![welcome page](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/start%20page.png)
 ![attendance](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/start3.png)
 #### __동명이인, 이름 일부 입력 시 처리 방식__
@@ -27,7 +27,7 @@ __모듈 없데이트__ 실행
 ### __이용자 정보 관리 창__
 #### 기본 창
 ![info page](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/edit%20page.png)
-####이용자 정보 변경
+#### 이용자 정보 변경
 ![data edit](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/change%20name.png)
 
 ### __플래그 소개__
