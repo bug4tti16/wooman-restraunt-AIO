@@ -1,8 +1,8 @@
 @echo off
 python.exe -m pip install --upgrade pip
-pip install pathlib
-pip install pyserial
-pip install datetime
-pip install multiprocessing
-pip install jamo
-pip install webbrowser
+python3 -m pip install pathlib
+python3 -m pip install pyserial
+python3 -m pip install datetime
+python3 -m pip install multiprocessing
+python3 -m pip install jamo
+python3 -m pip install webbrowser
