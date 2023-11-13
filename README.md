@@ -23,7 +23,7 @@ _*날자 오류 수정_
 
 |__검색 기능 업데이트__||
 |---|---|
-|![UI2](Assets/NEWCOUNT.png)|![UI3](Assets/NEWCOUNT2.png)|
+| ![UI2](Assets/NEWCOUNT.png) | ![UI3](Assets/NEWCOUNT2.png) |
 |__미니멀한 디자인__|
 |---|---|
 |![UI4](Assets/NEWCOUNT3.png)|![UI5](Assets/NEWCOUNT4.png)|
