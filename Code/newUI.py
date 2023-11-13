@@ -275,7 +275,7 @@ class SEARCH_FRAME(ctk.CTkFrame):
 class CARD_READER(Process):
     def __init__(self,queue):
         self.PORT='COM3'
-        self.BAUD_RATE=6900
+        self.BAUD_RATE=9600
         super().__init__(target=self.START_READER,name="Card Reader",args=(queue,))
 
     def CLEAN(self,string):
