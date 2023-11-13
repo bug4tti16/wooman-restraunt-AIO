@@ -16,9 +16,6 @@ _*동명이인 처리 참고_
 _*날자 오류 수정_
 - 플래그 메세지 업데이트 오류 수정
 
-<details>
-  <summary>업데이트 1113</summary>
-  
 ### __UI 업데이트__
 
 | 시작 페이지 |
@@ -43,7 +40,7 @@ _*날자 오류 수정_
 |---|---|
 |![savefile image 1](Assets/NEWSAVE.png)|![savefile image 2](Assets/NEWSAVE2.png)|
 
-</details>
+
 
 ## __문제 해결__
 ### __프로그램 실행이 안되요!!! OTL__
