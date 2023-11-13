@@ -19,6 +19,8 @@ _*날자 오류 수정_
 ## __업데이트 1113__
 - UI 업데이트
 - 출력 파일 업데이트
+  ![savefile image 1](Assets/NEWSAVE.png)
+  ![savefile image 2](Assets/NEWSAVE2.png)
 - 백엔드 업데이트
 
 ## __문제 해결__
