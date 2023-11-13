@@ -21,7 +21,7 @@ _*날자 오류 수정_
 |---|
 |![UI1](Assets/NEWLANDING.png)|
 
-|__검색 기능 업데이트__||
+|__검색 기능 업데이트__| |
 |---|---|
 | ![UI2](Assets/NEWCOUNT.png) | ![UI3](Assets/NEWCOUNT2.png) |
 |__미니멀한 디자인__|
