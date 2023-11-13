@@ -461,25 +461,25 @@ class COUNTPAGE(ctk.CTkToplevel):
         n=ctk.CTkInputDialog(text=("이름 혹은 번호 입력"),title="미등록 카드")
         d=n.get_input()
         if d==None or '':
-            messagebox('등록을 취소합니다','경고')
+            messagebox('경고','등록을 취소합니다.')
         elif re.search('[0-9]',d):
             for u in self.DATA.ULIST:
                 if u.num==int(d):
-                    if messagebox.askokcancel(msg=f'{u.num}번 {u.name}님의 정보를 교체합니다.'):
+                    if messagebox.askokcancel(mess=f'{u.num}번 {u.name}님의 정보를 교체합니다.'):
                         u.RFID=f"#{data}"
                         self.DATA.SAVE_UDATA()
                         break
                     else:
-                        messagebox('등록을 취소합니다','경고')
+                        messagebox('경고','등록을 취소합니다.')
         else:
             for u in self.DATA.ULIST:
                 if u.name==d:
-                    if messagebox.askokcancel(msg=f'{u.num}번 {u.name}님의 정보를 교체합니다.'):
+                    if messagebox.askokcancel('경고',f'{u.num}번 {u.name}님의 정보를 교체합니다.'):
                         u.RFID=f"#{data}"
                         self.DATA.SAVE_UDATA()
                         break
                     else:
-                        messagebox('등록을 취소합니다','경고')
+                        messagebox('경고','등록을 취소합니다.')
         
 class START_PAGE(ctk.CTkFrame):
     def __init__(self,container):
