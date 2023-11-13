@@ -54,8 +54,9 @@ _*날자 오류 수정_
 |---|---|
 |![savefile image 1](Assets/NEWSAVE.png)|![savefile image 2](Assets/NEWSAVE2.png)|
 
-
-
+<details>
+  <summary>이전 버전 정보</summary>
+  
 ## __문제 해결__
 ### __프로그램 실행이 안되요!!! OTL__
 ### 해결 1
@@ -132,4 +133,4 @@ __*중요*__
 저장 방법 : __인코딩__ -> __ansi__ | __파일명__ : __FLAG.txt__
 ![flag save](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/flag%20save.png)
 
-
+</details>
