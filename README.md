@@ -14,7 +14,7 @@
 </details>
 
 <details>
-  <summary>9-18-2023</summary>
+  <summary>9-18-2023업데이트</summary>
 
 ### 9/18/2023
 - 사용 설명서 내장
