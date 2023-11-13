@@ -465,7 +465,7 @@ class COUNTPAGE(ctk.CTkToplevel):
         elif re.search('[0-9]',d):
             for u in self.DATA.ULIST:
                 if u.num==int(d):
-                    if messagebox.askokcancel(mess=f'{u.num}번 {u.name}님의 정보를 교체합니다.'):
+                    if messagebox.askokcancel('경고',f'{u.num}번 {u.name}님의 정보를 교체합니다.'):
                         u.RFID=f"#{data}"
                         self.DATA.SAVE_UDATA()
                         break
