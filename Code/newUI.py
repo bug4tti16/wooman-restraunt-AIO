@@ -432,8 +432,8 @@ class COUNTPAGE(ctk.CTkToplevel):
     def CANCEL(self,event):
         if self.CURRENT!=None:
             self.CURRENT.ATTENDANCE=None
-            self.CURRENT=None
             self.LOG.SINGLE_MESSAGE(f'{self.CURRENT.name}님 취소되었습니다.',True)
+            self.CURRENT=None
             self.DATA.SAVE_DATA()
             self.GETCOUNT()
     
