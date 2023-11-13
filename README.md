@@ -17,18 +17,14 @@ _*날자 오류 수정_
 - 플래그 메세지 업데이트 오류 수정
 
 ## __업데이트 1113__
-- UI 업데이트
-  ![UI1](Assets/NEWLANDING.png)
-- __검색 기능 업데이트__
-  ![UI2](Assets/NEWCOUNT.png) ![UI3](Assets/NEWCOUNT2.png)
-- __미니멀한 디자인__
-  ![UI4](Assets/NEWCOUNT3.png)
-  ![UI5](Assets/NEWCOUNT4.png)
-- __출력 파일 업데이트__
-  ![savefile image 1](Assets/NEWSAVE.png)
-  ![savefile image 2](Assets/NEWSAVE2.png)
-- 백엔드 업데이트
-
+|UI 업데이트|
+|![UI1](Assets/NEWLANDING.png)|
+|__검색 기능 업데이트__|
+|![UI2](Assets/NEWCOUNT.png)|![UI3](Assets/NEWCOUNT2.png)|
+|__미니멀한 디자인__|
+|![UI4](Assets/NEWCOUNT3.png)|![UI5](Assets/NEWCOUNT4.png)|
+|__출력 파일 업데이트__|
+|![savefile image 1](Assets/NEWSAVE.png)|![savefile image 2](Assets/NEWSAVE2.png)|
 ## __문제 해결__
 ### __프로그램 실행이 안되요!!! OTL__
 ### 해결 1
