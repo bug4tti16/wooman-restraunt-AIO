@@ -1,2 +1,2 @@
 @echo off
-cd ../Code && python new UI.py
+cd ../Code && python newUI.py
