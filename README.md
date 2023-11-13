@@ -19,8 +19,10 @@ _*날자 오류 수정_
 ## __업데이트 1113__
 - UI 업데이트
   ![UI1](Assets/NEWLANDING.png)
+  - __검색 기능 업데이트__
   ![UI2](Assets/NEWCOUNT.png)
   ![UI3](Assets/NEWCOUNT2.png)
+  - __미니멀한 디자인__
   ![UI4](Assets/NEWCOUNT3.png)
   ![UI5](Assets/NEWCOUNT4.png)
 - 출력 파일 업데이트
