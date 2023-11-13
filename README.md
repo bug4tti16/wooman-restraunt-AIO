@@ -16,24 +16,33 @@ _*동명이인 처리 참고_
 _*날자 오류 수정_
 - 플래그 메세지 업데이트 오류 수정
 
-## __업데이트 1113__
-- __UI 업데이트__
+<details>
+<summary>업데이트 1113
+### __UI 업데이트__
 
 | 시작 페이지 |
 |---|
 |![UI1](Assets/NEWLANDING.png)|
 
-- __검색 기능 업데이트__
+- __검색 기능 개선__
 
 | 입력 전 | 입력 후 |
 |---|---|
 | ![UI2](Assets/NEWCOUNT.png) | ![UI3](Assets/NEWCOUNT2.png) |
-|__미니멀한 디자인__|
+
+- __시각적 디자인 단순화__
+
+| 입력 취소 | 메뉴 변경 |
 |---|---|
 |![UI4](Assets/NEWCOUNT3.png)|![UI5](Assets/NEWCOUNT4.png)|
-|__출력 파일 업데이트__|
+- __출력 파일 업데이트__
+
+| 이용자 명단 | 이용 여부 |
 |---|---|
 |![savefile image 1](Assets/NEWSAVE.png)|![savefile image 2](Assets/NEWSAVE2.png)|
+
+</details>
+
 ## __문제 해결__
 ### __프로그램 실행이 안되요!!! OTL__
 ### 해결 1
