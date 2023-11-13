@@ -17,31 +17,31 @@ _*날자 오류 수정_
 - 플래그 메세지 업데이트 오류 수정
 
 <details>
-<summary>업데이트 1113
+  <summary>업데이트 1113</summary>
   
-  ### __UI 업데이트__
+### __UI 업데이트__
 
-    | 시작 페이지 |
-    |---|
-    |![UI1](Assets/NEWLANDING.png)|
+| 시작 페이지 |
+|---|
+|![UI1](Assets/NEWLANDING.png)|
 
-    - __검색 기능 개선__
+- __검색 기능 개선__
 
-    | 입력 전 | 입력 후 |
-    |---|---|
-    | ![UI2](Assets/NEWCOUNT.png) | ![UI3](Assets/NEWCOUNT2.png) |
+| 입력 전 | 입력 후 |
+|---|---|
+| ![UI2](Assets/NEWCOUNT.png) | ![UI3](Assets/NEWCOUNT2.png) |
 
-    - __시각적 디자인 단순화__
+- __시각적 디자인 단순화__
 
-    | 입력 취소 | 메뉴 변경 |
-    |---|---|
-    |![UI4](Assets/NEWCOUNT3.png)|![UI5](Assets/NEWCOUNT4.png)|
+| 입력 취소 | 메뉴 변경 |
+|---|---|
+|![UI4](Assets/NEWCOUNT3.png)|![UI5](Assets/NEWCOUNT4.png)|
   
-    - __출력 파일 업데이트__
+- __출력 파일 업데이트__
 
-    | 이용자 명단 | 이용 여부 |
-    |---|---|
-    |![savefile image 1](Assets/NEWSAVE.png)|![savefile image 2](Assets/NEWSAVE2.png)|
+| 이용자 명단 | 이용 여부 |
+|---|---|
+|![savefile image 1](Assets/NEWSAVE.png)|![savefile image 2](Assets/NEWSAVE2.png)|
 
 </details>
 
