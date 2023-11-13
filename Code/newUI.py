@@ -20,9 +20,11 @@ class USER_DATA:
         self.ATTENDANCE=self.ATT(sdf,ind)
     
     def ATT(self,sdf,ind):
-        try: x=sdf.loc[sdf.index[ind],dt.date.today()]
-        except: return None
-        else: return x
+        if dt.date.today() in sdf.columns:
+            x=sdf.iloc[ind][dt.date.today()]
+            return x
+        else:
+            return None
 
 class DATA_FRAME:
     def __init__(self):
@@ -392,7 +394,7 @@ class COUNTPAGE(ctk.CTkToplevel):
         except: pass
         else:
             for u in self.DATA.ULIST:
-                if type(d)==str and u.RFID in d:
+                if type(d)==str and d in u.RFID:
                     self.CURRENT=u
                     self.CARD_HANDLER(u)
                     exists=True
