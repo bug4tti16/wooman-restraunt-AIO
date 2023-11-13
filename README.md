@@ -18,6 +18,11 @@ _*날자 오류 수정_
 
 ## __업데이트 1113__
 - UI 업데이트
+  ![UI1](Assets/NEWLANDING.png)
+  ![UI2](Assets/NEWCOUNT.png)
+  ![UI3](Assets/NEWCOUNT2.png)
+  ![UI4](Assets/NEWCOUNT3.png)
+  ![UI5](Assets/NEWCOUNT4.png)
 - 출력 파일 업데이트
   ![savefile image 1](Assets/NEWSAVE.png)
   ![savefile image 2](Assets/NEWSAVE2.png)
