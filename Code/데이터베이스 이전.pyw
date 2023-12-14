@@ -153,27 +153,32 @@ dblocation=os.path.join(os.path.expanduser('~'),'Documents','경로식당','data
 con=sqlite3.connect(dblocation)
 cur = con.cursor()
 
-col=list(df)
+if cur.execute("SELECT COUNT(*) FROM users")[0][0]==0:
 
-for i in df.index:
-    num=int(df['번호'][i])
-    print (num)
-    for x in col:
-        if type(df[x][i])==list:
-            date=df[x][i][0].isoformat(sep=' ',timespec="seconds")
-            print (date)
-            if df[x][i][2]:
-                cur.execute(f"""
-                INSERT INTO  log (UID, Time, Actions)
-                VALUES ('{num}', '{date}', 1)""")
-            if df[x][i][2]==False:
-                cur.execute(f"""
-                INSERT INTO  log (UID, Time, Actions)
-                VALUES ('{num}', '{date}', 2)""")
-            if '죽' in df[x][i][1]:
-                cur.execute(f"""
-                INSERT INTO  log (UID, Time, Actions)
-                VALUES ('{num}', '{date}', 3)""")
+    col=list(df)
+
+    for i in df.index:
+        num=int(df['번호'][i])
+        print (num)
+        for x in col:
+            if type(df[x][i])==list:
+                date=df[x][i][0].isoformat(sep=' ',timespec="seconds")
+                print (date)
+                if df[x][i][2]:
+                    cur.execute(f"""
+                    INSERT INTO  log (UID, Time, Actions)
+                    VALUES ('{num}', '{date}', 1)""")
+                if df[x][i][2]==False:
+                    cur.execute(f"""
+                    INSERT INTO  log (UID, Time, Actions)
+                    VALUES ('{num}', '{date}', 2)""")
+                if '죽' in df[x][i][1]:
+                    cur.execute(f"""
+                    INSERT INTO  log (UID, Time, Actions)
+                    VALUES ('{num}', '{date}', 3)""")
    
-cur.execute('commit;')
+    cur.execute('commit;')
+    messagebox('알림','이전이 완료었습니다.')
+else:
+    messagebox('알림','이전할 데이터가 없습니다.')
                 
