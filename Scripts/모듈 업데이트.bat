@@ -9,5 +9,5 @@ pip install webbrowser
 pip install customtkinter
 pip install pandas
 pip install openpyxl
-pip install pyinput
+pip install pynput
 pip install sqlite3
