@@ -1,4 +1,4 @@
 @echo off
 cd ../
-git pull
+git pull origin main
 pause
