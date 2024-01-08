@@ -524,7 +524,7 @@ class COUNTPAGE(ctk.CTkToplevel):
         n=ctk.CTkInputDialog(text=("이름 혹은 번호 입력"),title="미등록 카드")
         d=n.get_input()
         if d==None or '':
-            messagebox('경고','등록을 취소합니다.')
+            messagebox.showerror('경고','등록을 취소합니다.')
         else:
             num=self.DATABASE.Check_Input(d)
             if num!=None:
@@ -533,7 +533,7 @@ class COUNTPAGE(ctk.CTkToplevel):
                     self.DATABASE.AddCard(l[0],data)
                     self.LOG.SINGLE_MESSAGE(f"{l[0]}번 {l[1]}님 카드 등록 완료. 카드 찍어주세요.",True)
                 else:
-                    messagebox('경고','등록을 취소합니다.')
+                    messagebox.showerror('경고','등록을 취소합니다.')
 
 class START_PAGE(ctk.CTkFrame):
     def __init__(self,container):
