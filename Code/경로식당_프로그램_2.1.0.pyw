@@ -235,7 +235,13 @@ class Database:
 
     def AddCard(self,num,cardno):
         self.cur.execute(
-            f"""UPDATE OR REPLACE users
+            f"""UPDATE users
+            SET card='#'
+            WHERE card='#{cardno}'"""
+        )
+        self.con.commit()
+        self.cur.execute(
+            f"""UPDATE users
             SET card='#{cardno}'
             WHERE num={num}"""
         )
@@ -496,8 +502,10 @@ class COUNTPAGE(ctk.CTkToplevel):
                 self.LOG.NEW_FRAME(*att)
                 self.GETCOUNT()
                 
-            elif type(d)==str:
+            elif type(d)==str and len(d)==10:
                 self.NOCARDHANDLER(d)
+            elif type(d)==str:
+                self.LOG.SINGLE_MESSAGE("카드가 인식되지 않았습니다.",True)
         finally:
             self.after(100,self.DATA_HANDLING)
     
@@ -531,7 +539,7 @@ class COUNTPAGE(ctk.CTkToplevel):
                 l=[num,self.DATABASE.Return_udata(num)]
                 if messagebox.askokcancel("경고",f"{l[0]}번 {l[1]}님의 정보를 교체합니다."):
                     self.DATABASE.AddCard(l[0],data)
-                    self.LOG.SINGLE_MESSAGE(f"{l[0]}번 {l[1]}님 카드 등록 완료. 카드 찍어주세요.",True)
+                    self.LOG.SINGLE_MESSAGE(f"{l[0]}번 {l[1]}님 카드 등록 완료. \n카드 찍어주세요.",True)
                 else:
                     messagebox.showerror('경고','등록을 취소합니다.')
 
