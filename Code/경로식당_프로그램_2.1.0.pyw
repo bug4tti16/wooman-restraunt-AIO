@@ -146,18 +146,21 @@ class Database:
                 df.to_excel(w,sheet_name=dt.datetime.now().strftime('%Y-%m'),header=True,index=False)
             
     def Check_Input(self,data):
-        try:
-            int(data)
-        except:
+        if len(data)==10:
             check=self.cur.execute(
                 f"""SELECT num
                 FROM users
-                WHERE card='#{data}' OR name='{data}'""").fetchall()
-        else:
+                WHERE card='#{data}'""").fetchall()
+        elif re.search('[0-9]',data):
             check=self.cur.execute(
                 f"""SELECT num
                 FROM users
                 WHERE num={data}""").fetchall()
+        else:
+            check=self.cur.execute(
+                f"""SELECT num
+                FROM users
+                WHERE name='{data}'""").fetchall()
         if check==[]:
             return None
         if len(check)>1:
