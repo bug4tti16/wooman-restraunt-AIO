@@ -146,12 +146,12 @@ class Database:
                 df.to_excel(w,sheet_name=dt.datetime.now().strftime('%Y-%m'),header=True,index=False)
             
     def Check_Input(self,data):
-        if len(data)==10:
+        if len(str(data))==10:
             check=self.cur.execute(
                 f"""SELECT num
                 FROM users
                 WHERE card='#{data}'""").fetchall()
-        elif re.search('[0-9]',data):
+        elif re.search('[0-9]',str(data)):
             check=self.cur.execute(
                 f"""SELECT num
                 FROM users
@@ -326,7 +326,7 @@ class SEARCH_FRAME(ctk.CTkFrame):
         output2=[]
         for users in self.ulist:
             cnt=0
-            if len(TYPE)<=len(h2j(users[1])):
+            if len(TYPE)<=len(users[1]):
                 for x in range (len(TYPE)):
                     if list(TYPE)[x]==list(users[1])[x]:
                         cnt+=1
