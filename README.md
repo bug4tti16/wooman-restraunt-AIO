@@ -75,7 +75,14 @@ _*날자 오류 수정_
 |![edit_new_3](Assets/edit_new_3.png)|
 |![edit_new_4](Assets/edit_new_4.png)|
 
+- __이용자 정보 수정__
 
+| 이용자 정보 수정 |
+|---|
+|![edit_update_1](Assets/edit_update.png)|
+|![edit_update_2](Assets/edit_update_1.png)|
+|![edit_update_3](Assets/edit_update_2.png)|
+|![edit_update_4](Assets/edit_update_3.png)|
 
 
 
