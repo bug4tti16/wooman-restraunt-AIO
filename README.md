@@ -57,7 +57,7 @@ _*날자 오류 수정_
 
 </details>
 
-# __업데이트2.1.2__
+# __업데이트 2.1.2__
 
 - __이용자 편집__
 
@@ -77,6 +77,10 @@ _*날자 오류 수정_
 |![edit_update_1](Assets/edit_update.png)|![edit_update_2](Assets/edit_update_1.png)|
 |---|---|
 |![edit_update_3](Assets/edit_update_2.png)|![edit_update_4](Assets/edit_update_3.png)|
+
+- __이용자 목록 정열__
+|![edit_sort_1](Assets/edit_sort.png)|![edit_sort_2](Assets/edit_sort_1.png)|
+|---|---|
 
 
 
