@@ -57,6 +57,18 @@ _*날자 오류 수정_
 
 </details>
 
+# __업데이트2.1.2__
+
+- __이용자 편집__
+
+| 이용자 명단 |
+|---|
+|![edit empty](Assets/edit_overview.png)|
+|![edit_base](Assets/edit_blank.png)|
+|---|
+
+
+
 
 # __업데이트 2.0.0__
 
