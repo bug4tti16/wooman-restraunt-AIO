@@ -65,7 +65,16 @@ _*날자 오류 수정_
 |---|
 |![edit empty](Assets/edit_overview.png)|
 |![edit_base](Assets/edit_blank.png)|
+
+- __신규 이용자 등록__
+
+| 신규 등록 |
 |---|
+|[edit_new_1](Assets/edit_new_1.png)|
+|[edit_new_2](Assets/edit_new_2.png)|
+|[edit_new_3](Assets/edit_new_3.png)|
+|[edit_new_4](Assets/edit_new_4.png)|
+
 
 
 
