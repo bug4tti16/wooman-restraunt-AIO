@@ -63,8 +63,8 @@ _*날자 오류 수정_
 
 | 이용자 명단 |
 |---|
-|![edit empty](Assets/edit_overview.png)|
-|![edit_base](Assets/edit_blank.png)|
+|![edit empty](Assets/edit_overview.png)|![edit_base](Assets/edit_blank.png)|
+
 
 - __신규 이용자 등록__
 
