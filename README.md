@@ -11,29 +11,28 @@
  |---|---|
  | ![flag_off](Assets/2.1.2/count_flag.png) | ![flag_on](Assets/2.1.2/count_noflag.png) |
 
-  ## __이용자 편집__
-
-  | ![edit empty](Assets/2.1.2/edit_overview.png) | ![edit_base](Assets/2.1.2/edit_blank.png) |
-  |---|---|
-
-
-  ## __신규 이용자 등록__
-
-  | ![edit_new_1](Assets/2.1.2/edit_new_1.png) | ![edit_new_2](Assets/2.1.2/edit_new_2.png) |
-  |---|---|
-  | ![edit_new_3](Assets/2.1.2/edit_new_3.png) | ![edit_new_4](Assets/2.1.2/edit_new_4.png) |
+ |특이사항 파일 작성 요령|저장 위치|
+ |---|---|
+ | ![flag_file](Assets/2.1.2/Flag_File.png) | ![flag_loc](Assets/2.1.2/Directory_Flag.png) |
 
   ## __이용자 정보 수정__
 
-
+  | ![edit empty](Assets/2.1.2/edit_overview.png) | ![edit_base](Assets/2.1.2/edit_blank.png) |
+  |---|---|
+  
+  |신규 등록||
+  |---|---|
+  | ![edit_new_1](Assets/2.1.2/edit_new_1.png) | ![edit_new_2](Assets/2.1.2/edit_new_2.png) |
+  | ![edit_new_3](Assets/2.1.2/edit_new_3.png) | ![edit_new_4](Assets/2.1.2/edit_new_4.png) |
+  
+  |기존 정보 수정||
+  |---|---|
   |![edit_update_1](Assets/2.1.2/edit_update.png)|![edit_update_2](Assets/2.1.2/edit_update_1.png)|
-  |---|---|
   |![edit_update_3](Assets/2.1.2/edit_update_2.png)|![edit_update_4](Assets/2.1.2/edit_update_3.png)|
-
-  ## __이용자 목록 정열__
-
-  | ![edit_sort_1](Assets/2.1.2/edit_sort.png) | ![edit_sort_2](Assets/2.1.2/edit_sort_1.png) |
+  
+  |이용자 목록 정열||
   |---|---|
+  | ![edit_sort_1](Assets/2.1.2/edit_sort.png) | ![edit_sort_2](Assets/2.1.2/edit_sort_1.png) |
 
 
 
