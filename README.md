@@ -65,26 +65,26 @@ _*날자 오류 수정_
 
 # __업데이트 2.1.2__
 
-- __이용자 편집__
+## __이용자 편집__
 
 | ![edit empty](Assets/edit_overview.png) | ![edit_base](Assets/edit_blank.png) |
 |---|---|
 
 
-- __신규 이용자 등록__
+## __신규 이용자 등록__
 
 | ![edit_new_1](Assets/edit_new_1.png) | ![edit_new_2](Assets/edit_new_2.png) |
 |---|---|
 | ![edit_new_3](Assets/edit_new_3.png) | ![edit_new_4](Assets/edit_new_4.png) |
 
-- __이용자 정보 수정__
+## __이용자 정보 수정__
 
 
 |![edit_update_1](Assets/edit_update.png)|![edit_update_2](Assets/edit_update_1.png)|
 |---|---|
 |![edit_update_3](Assets/edit_update_2.png)|![edit_update_4](Assets/edit_update_3.png)|
 
-- __이용자 목록 정열__
+## __이용자 목록 정열__
 
 | ![edit_sort_1](Assets/edit_sort.png) | ![edit_sort_2](Assets/edit_sort_1.png) |
 |---|---|
