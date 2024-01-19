@@ -384,8 +384,31 @@ class SEARCH_FRAME(ctk.CTkFrame):
 class LIVE_FRAMES(ctk.CTkScrollableFrame):
     Menu=['일반식','죽식']
     FRAMES=[]
+    Flag_Location=os.path.join(pathlib.Path(__file__).parent.parent,'FLAG.txt')
+    try:
+        with open(Flag_Location) as f:
+            U_raw=f.readline()
+            U_string=U_raw.replace(' ','')
+            Message=f.readline()
+            U_list=U_string.split(",")
+    except:
+        Flag_Location=None
     def __init__(self,container):
         super().__init__(container,fg_color='transparent',width=400)
+        self.Flag_Location=os.path.join(pathlib.Path(__file__).parent.parent,'FLAG.txt')
+        try:
+            with open(self.Flag_Location,"r",encoding='utf-8') as f:
+                U_raw=f.readline()
+                print (U_raw)
+                U_string=U_raw.replace(' ','')
+                self.Message=f.readline()
+                self.U_list=U_string.split(",")
+        except:
+            self.Flag_Location=None
+            U_raw=''
+        finally:
+            if U_raw=='' or None:
+                self.Flag_Location=None
     
     def NEW_FRAME(self,*DATA):
         #DATA=[num,name,datetime,menu]
@@ -399,6 +422,11 @@ class LIVE_FRAMES(ctk.CTkScrollableFrame):
         self.FRAMES.append(f)
         if len(self.FRAMES)>20:
             self.FRAMES.pop(0).destroy()
+        print (self.Flag_Location)
+        if self.Flag_Location!=None:
+            if str(DATA[0]) in self.U_list or str(DATA[1]) in self.U_list:
+                self.SINGLE_MESSAGE(f"{str(DATA[1])}님 \n {self.Message}",True)
+
     
     def SINGLE_MESSAGE(self,message,highlight):
         f=ctk.CTkFrame(self)
@@ -412,6 +440,7 @@ class LIVE_FRAMES(ctk.CTkScrollableFrame):
     
     def DEMO(self):
         ctk.CTkButton(self,text="test",command=partial(self.NEW_FRAME,("1",'이름',dt.datetime.now().strftime("%H시 %M분 %S초"),'죽식'))).pack()
+  
 
 class CARD_READER(Process):
     def __init__(self,queue):
