@@ -3,6 +3,11 @@
 
 # __업데이트 2.1.2__
 
+  ## __프로그램 이용__
+  |시작 화면|이용자 확인 화면|
+  |---|---|
+  
+
   ## __이용자 편집__
 
   | ![edit empty](Assets/edit_overview.png) | ![edit_base](Assets/edit_blank.png) |
