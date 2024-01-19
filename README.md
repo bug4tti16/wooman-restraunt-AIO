@@ -130,56 +130,56 @@ _*날자 오류 수정_
 __user_list_RFID.csv__ 파일 존재 확인
 ### 해결 2
 __user_list_RFID.csv__ 파일 실행 및 형식 확인
-![user data](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/user%20data%20file.png)
+![user data](Assets/Legacy/user_data_file.png)
 #### __중요__
 저장 시 CSV 파일로 저장!! -> 다른 이름으로 저장
-![user data save](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/saving.png)
+![user data save](Assets/Legacy/saving.png)
 ###  해결 3
 메모장으로 열기 -> 다른 이름으로 열기 -> __인코딩 : ANSI__
-![user data encoding](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/no%20open1.png)
-![user data encoding](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/no%20open2.png)
+![user data encoding](Assets/Legacy/no_open1.png)
+![user data encoding](Assets/Legacy/no_open2.png)
 ### 해결 4
 __update code__ 실행
-![first run](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/scripts%20folder.png)
+![first run](Assets/Legacy/scripts_folder.png)
 ### 해결 5
 __모듈 업데이트__ 실행
-![first run](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/scripts%20folder.png)
+![first run](Assets/Legacy/scripts_folder.png)
 
 ## 프로그램 실행 전
 ### 올바른 파일 형태
 user_list_RFID.csv 파일 있음
 
-![correct image](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/Correct!!.png)
+![correct image](Assets/Legacy/Correct!!.png)
 ### 잘못된 파일 형태
 user_list_RFID.csv 파일 없음
 
-![wrong image](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/wrong!!.png)
+![wrong image](Assets/Legacy/wrong!!.png)
 ### __처음 실행 시__
 __모듈 업데이트__ 실행
 
-![first run](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/scripts%20folder.png)
+![first run](Assets/Legacy/scripts_folder.png)
 ## 프로그램 실행 후
 ### __기본 창__
-![welcome page](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/start%20page%20(2).png)
+![welcome page](Assets/Legacy/start_page2.png)
 ### __시작 창__
-![welcome page](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/start%20page.png)
-![attendance](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/start3.png)
+![welcome page](Assets/Legacy/start_page.png)
+![attendance](Assets/Legacy/start3.png)
 #### __동명이인, 이름 일부 입력 시 처리 방식__
-![same name](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/same%20name.png)
+![same name](Assets/Legacy/same_name.png)
 #### __도구 창 메뉴__
 금일 이용자 방문 여부 방문 시간 표출
-![Loobar](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/too.png)
+![Loobar](Assets/Lecacy/too.png)
 
 ### __이용자 관리 창__
 #### 기본 창
-![info page](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/edit%20page.png)
+![info page](Assets/Legacy/edit_page.png)
 #### 이용자 정보 변경
 _정보 변경 시 날자별 백업파일 생산_
-![data edit](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/change%20name.png)
+![data edit](Assets/Legacy/change_name.png)
 #### 저장 파일 형식
 파일명 : __0000년 0월.csv__
 
-![save file](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/save%20format.png)
+![save file](Assets/Legacy/save_format.png)
 ##### 키워드 부연
 O : 카드 지참
 NC : 카드 미지참
@@ -188,16 +188,16 @@ NC : 카드 미지참
 
 ### __플래그 소개__
 _기능 설명: 메세지와 알림음 발생_
-![flag running](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/flag%20in%20action.png)
+![flag running](Assets/Legacy/flag_in_action.png)
 #### 플래그 파일 형태
 파일명 : __FLAG.txt__
 
 __*중요*__
 
-인코딩 : __ansi__ 
+인코딩 : utf-8
 
-![flag format](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/flag%20format.png)
+![flag format](Assets/Legacy/flag_format.png)
 저장 방법 : __인코딩__ -> __ansi__ | __파일명__ : __FLAG.txt__
-![flag save](https://github.com/bug4tti16/wooman-restraunt-AIO/blob/main/Assets/flag%20save.png)
+![flag save](Assets/Legacy/flag_save.png)
 
 </details>
