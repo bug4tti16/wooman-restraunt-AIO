@@ -6,6 +6,11 @@
   | ![start_dark](Assets/2.1.2/title_dark.png) | ![count_dark](Assets/2.1.2/count_dark.png) |
   | ![start_dark](Assets/2.1.2/title_light.png) | ![count_dark](Assets/2.1.2/count_light.png) |
 
+   ## __특이사항 알림__
+ |사용|미사용|
+ |---|---|
+ | ![flag_off](Assets/2.1.2/count_flag.png) | ![flag_on](Assets/2.1.2/count_noflag.png) |
+
   ## __이용자 편집__
 
   | ![edit empty](Assets/2.1.2/edit_overview.png) | ![edit_base](Assets/2.1.2/edit_blank.png) |
@@ -30,10 +35,7 @@
   | ![edit_sort_1](Assets/2.1.2/edit_sort.png) | ![edit_sort_2](Assets/2.1.2/edit_sort_1.png) |
   |---|---|
 
- ## __특이사항 알림__
- |사용|미사용|
- |---|---|
- | ![flag_off](Assets/2.1.2/count_flag.png) | ![flag_on](Assets/2.1.2/count_noflag.png) |
+
 
 ## 이전 주요 업데이트
 
