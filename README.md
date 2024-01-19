@@ -69,25 +69,25 @@
 
 | 시작 페이지 |
 |---|
-|![UI1](Assets/NEWLANDING.png)|
+|![UI1](Assets/2.0.0/NEWLANDING.png)|
 
 ## __검색 기능 개선__
 
 | 입력 전 | 입력 후 |
 |---|---|
-| ![UI2](Assets/NEWCOUNT.png) | ![UI3](Assets/NEWCOUNT2.png) |
+| ![UI2](Assets/2.0.0/NEWCOUNT.png) | ![UI3](Assets/2.0.0/NEWCOUNT2.png) |
 
 ## __시각적 디자인 단순화__
 
 | 입력 취소 | 메뉴 변경 |
 |---|---|
-|![UI4](Assets/NEWCOUNT3.png)|![UI5](Assets/NEWCOUNT4.png)|
+|![UI4](Assets/2.0.0/NEWCOUNT3.png)|![UI5](Assets/2.0.0/NEWCOUNT4.png)|
   
 ## __출력 파일 업데이트__
 
 | 이용자 명단 | 이용 여부 |
 |---|---|
-|![savefile image 1](Assets/NEWSAVE.png)|![savefile image 2](Assets/NEWSAVE2.png)|
+|![savefile image 1](Assets/2.0.0/NEWSAVE.png)|![savefile image 2](Assets/2.0.0/NEWSAVE2.png)|
 
 
     
